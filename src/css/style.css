@@ -24,3 +24,289 @@ to help you out.
 		max-width: 768px;
 	}
 }
+
+/* Zekai's work on story1/2/3 section below */
+
+/* Hiding components except story 1, 2, and 3 */
+.notification,
+.home,
+.tutorial1,
+.tutorial2,
+.tutorial3,
+.tutorial4,
+.game,
+.pausepage,
+.endscene {
+	display: none;
+}
+
+.story1,
+.story2,
+.story3 {
+	background-image: url("../images/Story_background.png");
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* Story 1 styling */
+.story1 {
+	position: relative;
+	margin: 20px auto;
+	max-width: 100%;
+	background-color: #FFFFFF;
+	border: 2px solid #000000;
+	padding: 20px;
+}
+
+/* Button styling */
+.story1 .story-home,
+.story1 .story-skip {
+	position: absolute;
+	top: 10px;
+	padding: 10px 20px;
+	background-color: purple;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.story1 .story-home {
+	left: 10px;
+}
+
+.story1 .story-skip {
+	right: 10px;
+}
+
+/* Image styling */
+.story1 img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Paragraph styling */
+.story1 .story-chat {
+	font-size: 18px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0px;
+	color: white;
+}
+
+/* Next button styling */
+.story1 .story-next {
+	position: absolute;
+	bottom: 50%;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+/* Story 2 styling */
+.story2 {
+	position: relative;
+	margin: 20px auto;
+	max-width: 100%;
+	background-color: #FFFFFF;
+	border: 2px solid #000000;
+	padding: 20px;
+}
+
+/* Button styling */
+.story2 .story-home,
+.story2 .story-skip {
+	position: absolute;
+	top: 10px;
+	padding: 10px 20px;
+	background-color: purple;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.story2 .story-home {
+	left: 10px;
+}
+
+.story2 .story-skip {
+	right: 10px;
+}
+
+/* Image styling */
+.story2 img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Paragraph styling */
+.story2 .story-chat {
+	font-size: 18px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0px;
+	/* margin-top: 20px; */
+	color: white
+}
+
+/* Previous button styling */
+.story2 .story-prev {
+	position: absolute;
+	bottom: 50%;
+	left: 20px;
+	padding: 10px 20px;
+	background-color: #43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+/* Next button styling */
+.story2 .story-next {
+	position: absolute;
+	bottom: 50%;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+/* Story 3 styling */
+.story3 {
+	position: relative;
+	margin: 20px auto;
+	max-width: 100%;
+	background-color: #FFFFFF;
+	border: 2px solid #000000;
+	padding: 20px;
+}
+
+/* Button styling */
+.story3 .story-home,
+.story3 .story-skip {
+	position: absolute;
+	top: 10px;
+	padding: 10px 20px;
+	background-color: purple;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.story3 .story-home {
+	left: 10px;
+}
+
+.story3 .story-skip {
+	right: 10px;
+}
+
+/* Image styling */
+.story3 img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Paragraph styling */
+.story3 .story-chat {
+	font-size: 18px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0px;
+	/* margin-top: 20px; */
+	color: white
+}
+
+/* Next button styling */
+.story3 .story-next {
+	position: absolute;
+	bottom: 50%;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+/* Previous button styling */
+.story3 .story-prev {
+	position: absolute;
+	bottom: 50%;
+	left: 20px;
+	padding: 10px 20px;
+	background-color: #43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.story1 .story-chat {
+	position: relative;
+	background-color: #7621A6;
+	border-radius: 10px;
+	padding: 15px;
+	/* margin-top: 20px; */
+}
+
+.story1 .story-chat::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: 12px solid transparent;
+	transform: translateX(-50%);
+}
+
+.story2 .story-chat {
+	position: relative;
+	background-color: #7621A6;
+	border-radius: 10px;
+	padding: 15px;
+	/* margin-top: 20px; */
+}
+
+.story2 .story-chat::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: 12px solid transparent;
+	transform: translateX(-50%);
+}
+
+.story3 .story-chat {
+	position: relative;
+	background-color: #7621A6;
+	border-radius: 10px;
+	padding: 15px;
+	/* margin-top: 20px; */
+}
+
+.story3 .story-chat::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: 12px solid transparent;
+	transform: translateX(-50%);
+}
