@@ -11,15 +11,16 @@ to help you out.
 */
 
 /* This uses the same value as --size-xs. */
-@media screen and (width >=320px) {
-
-}
+@media screen and (width >=320px) {}
 
 /* Zekai's work on story1/2/3 section below */
 
 /* Hiding components except story 1, 2, and 3 */
-.notification{
-	display: none;
+.notification,
+.homepage,
+.story,
+.tutorial {
+	display: none !important;
 }
 
 body {
@@ -45,20 +46,21 @@ button {
 	height: 100vh;
 }
 
-.homepage .home-title{
+.homepage .home-title {
 	color: #ff99cc;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
 	position: absolute;
-  	left: 15%;
-  	top: 40%;
+	left: 15%;
+	top: 40%;
 	font-size: 40px;
 }
-.homepage .home-subtitle{
-	color:#ff99cc;
+
+.homepage .home-subtitle {
+	color: #ff99cc;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
 	position: absolute;
-  	left: 5%;
-  	top: 45%;
+	left: 5%;
+	top: 45%;
 	font-size: 40px;
 }
 
@@ -76,8 +78,8 @@ button {
 
 .homepage .speech-bubble {
 	position: absolute;
-  	top: -50px;
-  	left: 50%;
+	top: -50px;
+	left: 50%;
 	transform: translateX(-50%);
 	background-color: #ff99cc;
 	color: white;
@@ -98,12 +100,13 @@ button {
 }
 
 .homepage .home-buttons button {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .homepage .home-start {
-
+	
 }
+
 .homepage .home-gallery {
 
 }
@@ -119,9 +122,9 @@ button {
 	border: 2px solid #000000;
 	height: 100vh;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Image styling */
@@ -134,7 +137,7 @@ button {
 .story-chat {
 	position: absolute;
 	bottom: 30%;
-	width:90%;
+	width: 90%;
 	font-size: 18px;
 	text-align: center;
 	margin: 0 auto;
@@ -182,14 +185,14 @@ button {
 	border: 2px solid #000000;
 	height: 100vh;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.tutorial .tutorial-tips{
+.tutorial .tutorial-tips {
 	width: 150px;
-    height: 100px;
+	height: 100px;
 	padding: 30px;
 	border: none;
 	border-radius: 5px;
@@ -209,18 +212,19 @@ button {
 	right: 10%;
 }
 
-.tutorial .mr-cat{
+.tutorial .mr-cat {
 	position: absolute;
 	left: 10%;
 }
-.tutorial .cat{
+
+.tutorial .cat {
 	width: 8%;
-	position:absolute;
+	position: absolute;
 	left: 20%;
 }
 
 /*game styling*/
-.game{
+.game {
 	background-image: url("../images/gameBackground.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -234,11 +238,11 @@ button {
 }
 
 /* Game Button styling */
-.game button{
+.game button {
 	position: absolute;
 	top: 10px;
 	padding: 10px 20px;
-	background-color:#43368B;
+	background-color: #43368B;
 	color: #FFFFFF;
 	border: none;
 	cursor: pointer;
@@ -253,12 +257,13 @@ button {
 	right: 10px;
 }
 
-.game img{
+.game img {
 	max-width: 10%;
 }
 
 /*pause page styling*/
-.pausepage,.endscene{
+.pausepage,
+.endscene {
 	background-image: url("../images/gamePauseBackground.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -276,7 +281,7 @@ button {
 	text-align: center;
 }
 
-.pause-title{
+.pause-title {
 	color: #ff99cc;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	position: relative;
@@ -288,7 +293,7 @@ button {
 
 
 /*pause page button*/
-.pausepage button{
+.pausepage button {
 	position: absolute;
 	top: 10px;
 	padding: 10px 20px;
@@ -299,21 +304,23 @@ button {
 	border-radius: 10px;
 }
 
-.pausepage .cat-count{
+.pausepage .cat-count {
 	Right: 10px;
 }
 
-.pausepage .resume-title{
-	top:40%;
-}
-.pausepage .retry-title{
-	top:50%;
-}
-.pausepage .home-title{
-	top:60%;
+.pausepage .resume-title {
+	top: 40%;
 }
 
-.endscene .endtitle{
+.pausepage .retry-title {
+	top: 50%;
+}
+
+.pausepage .home-title {
+	top: 60%;
+}
+
+.endscene .endtitle {
 	color: #ff99cc;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	position: relative;
@@ -323,6 +330,6 @@ button {
 	top: -10%;
 }
 
-.endscene button{
+.endscene button {
 	margin: 20px;
 }
