@@ -51,13 +51,20 @@ to help you out.
 	position: absolute;
   	left: 15%;
   	top: 40%;
+	font-family: "Chango", sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+
 }
 .homepage .home-subtitle{
 	color:#ff99cc;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	position: absolute;
-  	left: 10%;
+  	left: 5%;
   	top: 45%;
+	font-family: "Chango", sans-serif;
+	font-weight: 400;	
+	font-size: 40px;
 }
 
 .homepage .cat-image {
@@ -78,6 +85,8 @@ to help you out.
   	left: 50%;
 	transform: translateX(-50%);
 	background-color: #ff99cc;
+	font-family: "Chango", sans-serif;
+	font-weight: 400;	
 	color: white;
 	padding: 10px 20px;
 	border-radius: 20px;
@@ -93,6 +102,8 @@ to help you out.
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	font-family: "Chango", sans-serif;
+	font-weight: 400;	
 }
 
 .homepage button{
