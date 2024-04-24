@@ -18,10 +18,7 @@ to help you out.
 /* Zekai's work on story1/2/3 section below */
 
 /* Hiding components except story 1, 2, and 3 */
-.notification,
-.game,
-.pausepage,
-.endscene {
+.notification{
 	display: none;
 }
 
@@ -61,7 +58,7 @@ button {
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
 	position: absolute;
   	left: 5%;
-  	top: 45%;	
+  	top: 45%;
 	font-size: 40px;
 }
 
@@ -105,10 +102,10 @@ button {
 }
 
 .homepage .home-start {
-	
+
 }
 .homepage .home-gallery {
-	
+
 }
 
 /* Story styling */
@@ -220,4 +217,112 @@ button {
 	width: 8%;
 	position:absolute;
 	left: 20%;
+}
+
+/*game styling*/
+.game{
+	background-image: url("../images/gameBackground.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	max-width: 100%;
+	height: 100vh;
+	background-color: #FFFFFF;
+	border: 2px solid #000000;
+	padding: 20px;
+}
+
+/* Game Button styling */
+.game button{
+	position: absolute;
+	top: 10px;
+	padding: 10px 20px;
+	background-color:#43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.game .game-pausebutton {
+	left: 10px;
+}
+
+.game .cat-count {
+	right: 10px;
+}
+
+.game img{
+	max-width: 10%;
+}
+
+/*pause page styling*/
+.pausepage,.endscene{
+	background-image: url("../images/gamePauseBackground.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	max-width: 100%;
+	height: 100vh;
+	background-color: #FFFFFF;
+	border: 2px solid #000000;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.pause-title{
+	color: #ff99cc;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	position: relative;
+	font-family: "Chango", sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	top: -25%
+}
+
+
+/*pause page button*/
+.pausepage button{
+	position: absolute;
+	top: 10px;
+	padding: 10px 20px;
+	background-color: #43368B;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.pausepage .cat-count{
+	Right: 10px;
+}
+
+.pausepage .resume-title{
+	top:40%;
+}
+.pausepage .retry-title{
+	top:50%;
+}
+.pausepage .home-title{
+	top:60%;
+}
+
+.endscene .endtitle{
+	color: #ff99cc;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	position: relative;
+	font-family: "Chango", sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	top: -10%;
+}
+
+.endscene button{
+margin: 20px;
 }
