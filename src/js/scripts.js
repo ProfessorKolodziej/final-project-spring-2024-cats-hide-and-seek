@@ -43,3 +43,24 @@ function resetGame() {
 
 // Call initializeGame function when DOM content is loaded
 document.addEventListener('DOMContentLoaded', initializeGame);
+
+
+/*for navigation*/
+document.querySelectorAll('button').forEach(button => {
+	button.addEventListener('click', function() {
+		 // Find all pages and hide them
+		 document.querySelectorAll('.page').forEach(page => {
+			  page.classList.remove('show');
+		 });
+		 // Determine the target page based on the button's class and show it
+		 if (this.classList.contains('home')) {
+			  document.querySelector('.homepage').classList.add('show');
+		 } else if (this.classList.contains('to-page2')) {
+			  document.querySelector('.page2').classList.add('show');
+		 } else if (this.classList.contains('to-page3')) {
+			  document.querySelector('.page3').classList.add('show');
+		 } else if (this.classList.contains('to-page4')) {
+			  document.querySelector('.page4').classList.add('show');
+		 }
+	});
+});
