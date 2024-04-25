@@ -15,12 +15,14 @@ to help you out.
 
 /* Zekai's work on story1/2/3 section below */
 
-/* Hiding components except story 1, 2, and 3 */
-.notification,
-.homepage,
-.story,
-.tutorial {
+/* Hiding all pages */
+
+/*.page{
 	display: none !important;
+}*/
+
+.homepage{
+	display: block !important;
 }
 
 body {
@@ -104,7 +106,7 @@ button {
 }
 
 .homepage .home-start {
-	
+
 }
 
 .homepage .home-gallery {
@@ -254,7 +256,17 @@ button {
 }
 
 .game .cat-count {
-	right: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 10px;
+	display: inline-block;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	background-color: #43368B;
+	text-align: center;
+	position: absolute;
 }
 
 .game img {
@@ -302,10 +314,6 @@ button {
 	border: none;
 	cursor: pointer;
 	border-radius: 10px;
-}
-
-.pausepage .cat-count {
-	Right: 10px;
 }
 
 .pausepage .resume-title {
