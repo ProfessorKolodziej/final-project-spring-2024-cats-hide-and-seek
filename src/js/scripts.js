@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
         homepage.style.display = 'block';
     });
 
+    const skipButton = document.querySelector('.story-skip');
+    const tutorial = document.querySelector('.tutorial');
+
+    skipButton.addEventListener('click', function() {
+        story.style.display = 'none';
+        tutorial.style.display = 'block';
+    });
+
     const chatContent = [
         "Hey there! I'm Mr. Cat. Can you do me a favor?",
         "I'm playing hide and seek with my six kids, but I can't find them anywhere. It seems like they've used that invisibility magic I showed them yesterday...",
@@ -65,7 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    const tutorial = document.querySelector('.tutorial');
     const tutorialInfo = document.querySelector('.tutorial-info');
     lastNextButton.addEventListener('click', function() {
         story.style.display = 'none';
@@ -86,7 +93,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     const tutorialNext2 = document.querySelector('.tutorial-chat2-next');
+
+
+    const tutskipButton = document.querySelector('.tutorial-skip');
     const game = document.querySelector('.game');
+
+    tutskipButton.addEventListener('click', function() {
+        tutorial.style.display = 'none';
+        game.style.display = 'block';
+    });
+    
     tutorialNext2.addEventListener('click', function() {
         tutorial.style.display = 'none';
         game.style.display = 'block';
@@ -101,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     const resumeButton = document.querySelector('.resume-title');
     const retryButton = document.querySelector('.retry-title');
+    const pausehomeButton = document.querySelector('.pausepage .home-title');
     resumeButton.addEventListener('click', function() {
         pausePage.style.display = 'none';
         game.style.display = 'block';
@@ -110,8 +127,11 @@ document.addEventListener("DOMContentLoaded", function() {
         game.style.display = 'block';
         resetGameState();
     });
-    homeButton.addEventListener('click', function() {
+    pausehomeButton.addEventListener('click', function() {
+        pausePage.style.display = 'none';
+        homepage.style.display = 'block';
     });
+    
 });
 
 function toggleImageVisibility() {
