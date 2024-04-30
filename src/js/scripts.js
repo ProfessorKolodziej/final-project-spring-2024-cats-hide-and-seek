@@ -235,7 +235,9 @@ function placeCats() {
                     catchcatLabel.textContent = catsFound;
                 }
             } else {
-                playAudio(0.2);
+                if (catImg.style.opacity != "1") {
+                    playAudio(0.2);
+                }
             }
         });
 
