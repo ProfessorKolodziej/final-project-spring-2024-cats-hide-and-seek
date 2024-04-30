@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="description" content="Update your description here" />
 	<title>Cats Hide and Seek</title>
 	<!--
@@ -17,117 +17,75 @@
 </head>
 
 <body>
-	<main class="content-container">
-		<div class="page notification">
-			<p class="mobile-notification">For the best experience, please flip your device horizontally</p>
-			<img src="images/cat4.png">
-		</div>
+	<div class="screen-container">
 
-		<div class="page homepage show">
-			<h1 class="home-title">Cats</h1>
-			<h1 class="home-subtitle">Hide and Seek</h1>
+		<div class="homepage">
+			<h1 class="home-title">Cats<br>Hide and Seek</h1>
+			<h1 class="home-subtitle"></h1>
 			<div class="cat-image">
 				<img src="images/homecat.png" alt="cat in a box">
 				<div class="speech-bubble">Can you find me?</div>
 			</div>
 			<div class="home-buttons">
-				<button class="home-start">Start Game</button>
+				<button class="home-start">Start</button>
 				<button class="home-gallery">Gallery</button>
 			</div>
 		</div>
 
-		<div class="page story">
+		<div class="story">
 			<button class="story-home">Home</button>
 			<button class="story-skip">Skip</button>
 			<img class="mr-cat" src="images/MrCat.png">
 			<p class="story-chat">Hey there! I'm Mr. Cat. Can you do me a favor?</p>
-			<button class="story-next">→</button>
-		</div>
-
-		<div class="page story">
-			<button class="story-home">Home</button>
-			<button class="story-skip">Skip</button>
-			<img class="mr-cat" src="images/MrCat.png">
-			<p class="story-chat">I'm playing hide and seek with my six kids,
-				but I can't find them anywhere. It seems like they've used
-				that invisibility magic I showed them yesterday...</p>
 			<button class="story-prev">←</button>
 			<button class="story-next">→</button>
+			<button class="story-last-next">Next</button>
 		</div>
 
-		<div class="page story">
-			<button class="story-home">Home</button>
-			<button class="story-skip">Skip</button>
-			<img class="mr-cat" src="images/MrCat.png">
-			<p class="story-chat">Anyway, I'm glad I found you! Could you help
-				me hold this heavy <b>magical cat detector</b>? Let me show you
-				how it works.</p>
-			<button class="story-prev">←</button>
-			<button class="story-next">→</button>
-		</div>
-
-		<div class="page tutorial">
-			<button class="story-home">Home</button>
-			<button class="story-skip">Skip</button>
-			<div class="tutorial-tip1">
-				<p class="tutorial-tips">Turn on the volume and listen to the meow</p>
+		<div class="tutorial">
+			<button class="tutorial-home">Home</button>
+			<button class="tutorial-skip">Skip</button>
+			<div class="tutorial-info">
+				<div class="tutorial-tip1">
+					<p class="tutorial-tips">Turn on the volume and listen to the meow</p>
+				</div>
+				<div class="tutorial-tip2">
+					<p class="tutorial-tips">Click around to get visual cues</p>
+				</div>
+				<p class="tutorial-chat">Mr.Cat: Now I'm hiding in this living room.
+					Just click around, the cat detector will guide you to me.</p>
+				<button class="tutorial-next">→</button>
 			</div>
-			<div class="tutorial-tip2">
-				<p class="tutorial-tips">Click around to get visual cues</p>
-			</div>
-			<p class="story-chat">Mr.Cat: Now I'm hiding in this living room.
-				Just click around, the cat detector will guide you to me.</p>
-			<button class="story-next">→</button>
-		</div>
-
-		<div class="page tutorial">
-			<img class="cat" src="images/cat3.png">
-			<button class="story-home">Home</button>
-			<button class="story-skip">Skip</button>
-		</div>
-
-		<div class="page tutorial">
-			<button class="story-home">Home</button>
-			<button class="story-skip">Skip</button>
-			<img class="cat" src="images/cat3.png">
-			<p class="story-chat">Good job!</p>
-			<button class="story-next">→</button>
-		</div>
-
-		<div class="page tutorial">
-			<button class="story-home">Home</button>
-			<button class="story-skip">Skip</button>
+			<img class="cat" src="images/cat3.png" onclick="toggleImageVisibility()">
+			<p class="tutorial-chat2">Good job! You're all set. Let's go find those naughty kittens!</p>
+			<button class="tutorial-chat2-next">→</button>
 			<img class="mr-cat" src="images/MrCat.png">
-			<p class="story-chat">You're all set. Let's go find those naughty kittens!</p>
-			<button class="story-next">→</button>
 		</div>
 
-		<div class="page game">
+		<div class="game">
 			<button class="game-pausebutton">&#10074&#10074</button>
-			<p class="cat-count">Cats Found<label class="catchcat-label"> 0</label>/6</p>
-			<img class="cat" src="images/cat1.png">
-			<img class="cat" src="images/cat2.png">
-			<img class="cat" src="images/cat3.png">
+			<p class="cat-count">Cats Found <label class="catchcat-label">0</label>/6</p>
+			<div class="cat-container"></div>
 		</div>
 
-		<div class="page pausepage">
+		<div class="pausepage">
 			<p class="pause-title">Pause</p>
 			<button class="resume-title">Resume</button>
 			<button class="retry-title">Retry</button>
 			<button class="home-title">Home</button>
 		</div>
 
-		<div class="page endscene">
+		<div class="endscene">
 			<p class="endtitle">Congrats! You found <label class="catchcat-label">0</label> cats</p>
 			<button class="backhome-title">Back to Home</button>
 			<button class="playagain-title">Play Again</button>
 		</div>
 
-	</main>
+	</div>
 	<!--
 		This is where you should link your JS file.
 	-->
-	<script src="js/script.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>
