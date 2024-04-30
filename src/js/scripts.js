@@ -154,10 +154,17 @@ const catImages = [
     "images/cat5.png",
     "images/cat6.png"
 ];
-
+const catWidth = 150;
+const catHeight = 150;
 function getRandomPosition() {
-    const x = Math.floor(Math.random() * (window.innerWidth-30));
-    const y = Math.floor(Math.random() * (window.innerHeight-30));
+    // Calculate the maximum x and y positions within the visible area of the screen
+    const maxX = window.innerWidth - catWidth;
+    const maxY = window.innerHeight - catHeight;
+
+    // Generate random positions within the visible area
+    const x = Math.floor(Math.random() * maxX);
+    const y = Math.floor(Math.random() * maxY);
+
     return { x, y };
 }
 
@@ -168,28 +175,71 @@ function placeCats() {
 
     // Clear any existing cats
     catContainer.innerHTML = "";
+
     for (let i = 0; i < catImages.length; i++) {
+        let overlapping = false;
+        let x, y;
+        do {
+            overlapping = false;
+            ({ x, y } = getRandomPosition());
+
+            // Check for overlaps with existing cats
+            for (const existingCat of catContainer.children) {
+                const rect1 = existingCat.getBoundingClientRect();
+                const rect2 = { 
+                    left: x,
+                    top: y,
+                    right: x + catWidth,
+                    bottom: y + catHeight
+                };
+
+                // Check if the rectangles overlap
+                if (
+                    rect1.left < rect2.right &&
+                    rect1.right > rect2.left &&
+                    rect1.top < rect2.bottom &&
+                    rect1.bottom > rect2.top
+                ) {
+                    overlapping = true;
+                    break;
+                }
+            }
+        } while (overlapping);
+
+        const catDiv = document.createElement("div");
+        const uniqueWrapperClass = `cat-wrapper-${i}`;
+        catDiv.classList.add(uniqueWrapperClass);
+        catDiv.style.width = `${catWidth}px`;
+        catDiv.style.height = `${catHeight}px`;
+        catDiv.style.position = "absolute";
+        catDiv.style.left = `${x}px`;
+        catDiv.style.top = `${y}px`;
+
         const catImg = document.createElement("img");
         catImg.src = catImages[i];
         catImg.classList.add("cat");
         catImg.style.opacity = "0";
         catImg.style.position = "absolute";
+        catImg.style.left = "50%";
+        catImg.style.top = "50%";
+        catImg.style.transform = "translate(-50%, -50%)";
+        
+        catDiv.appendChild(catImg);
 
-        const { x, y } = getRandomPosition();
-        console.log(x,y);
-        catImg.style.left = `${x}px`;
-        catImg.style.top = `${y}px`;
-
-        catImg.addEventListener("click", () => {
-            if (catImg.style.opacity != "1") {
-                playAudio();
-                catImg.style.opacity = "1";
-                catsFound++;
-                catchcatLabel.textContent = catsFound;
+        catDiv.addEventListener("click", (event) => {
+            if (event.target.classList.contains("cat")) {
+                if (catImg.style.opacity != "1") {
+                    playAudio(1);
+                    catImg.style.opacity = "1";
+                    catsFound++;
+                    catchcatLabel.textContent = catsFound;
+                }
+            } else {
+                playAudio(0.2);
             }
         });
 
-        catContainer.appendChild(catImg);
+        catContainer.appendChild(catDiv);
     }
 }
 
@@ -210,10 +260,7 @@ function resetGameState() {
 
 var audio = document.getElementsByClassName("catAudio")[0];
 
-function playAudio() {
-  audio.play();
-}
-
-function pauseAudio() {
-  audio.pause();
+function playAudio(volume) {
+    audio.volume = volume;
+    audio.play();
 }
