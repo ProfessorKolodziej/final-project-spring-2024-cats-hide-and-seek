@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
     tutskipButton.addEventListener('click', function() {
         tutorial.style.display = 'none';
         game.style.display = 'block';
+        placeCats();
     });
     
     tutorialNext2.addEventListener('click', function() {
@@ -180,7 +181,8 @@ function placeCats() {
         catImg.style.top = `${y}px`;
 
         catImg.addEventListener("click", () => {
-            if (catImg.style.opacity === "0") {
+            if (catImg.style.opacity != "1") {
+                playAudio();
                 catImg.style.opacity = "1";
                 catsFound++;
                 catchcatLabel.textContent = catsFound;
@@ -204,4 +206,14 @@ function resetGameState() {
         catImg.style.opacity = "0";
     });
     placeCats();
+}
+
+var audio = document.getElementsByClassName("catAudio")[0];
+
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
 }
