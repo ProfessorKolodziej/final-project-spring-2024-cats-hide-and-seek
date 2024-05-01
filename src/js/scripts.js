@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function toggleImageVisibility() {
-    var catImage = document.querySelector('.cat');
+    var catImage = document.querySelector('.tutorial .cat');
     catImage.style.opacity = '1';
     const tutorialChat2 = document.querySelector('.tutorial-chat2');
     tutorialChat2.style.display = "block";
