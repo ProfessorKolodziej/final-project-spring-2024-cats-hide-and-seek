@@ -1,4 +1,5 @@
 /* styles apply to mobile by default */
+.about,
 .story,
 .tutorial,
 .game {
@@ -60,7 +61,7 @@ button {
 .homepage .cat-image {
     width: 33%;
 	position: absolute;
-	bottom: -12%;
+	bottom: 5%;
 	right: 10%;
 }
 
@@ -86,6 +87,49 @@ button {
 
 .homepage .home-buttons button {
 	margin-bottom: 20px;
+}
+
+.about {
+	width: 100%;
+    height: 100vh;
+	background-image: url("../images/Story_background.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.about .about-home{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.about .about-title{
+	color:#ff99cc;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+	position: absolute;
+	left: 20%;
+	top: 10%;
+	font-size: 2rem;
+}
+.about h2{
+	color:#ff99cc;
+}
+
+.about .about-text{
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+	position: absolute;
+	top:25%;
+	left: 12%;
+	padding:20px;
+	width: 650px;
+	height: 220px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	background-color: #43368b94;
 }
 
 .story {
@@ -174,7 +218,7 @@ button {
 	border: none;
 	border-radius: 5px;
 	color: white;
-	font-size: 0.6rem;
+	font-size: 1rem;
 	background-color: #43368b94;
 }
 
@@ -282,14 +326,31 @@ button {
     height: 100vh;
 }
 
-.pause-title {
-	color: #ff99cc;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.pausepage button{
 	position: relative;
-	font-family: "Chango", sans-serif;
-	font-weight: 400;
-	font-size: 40px;
-	top: -25%
+	top:40%;
+	margin-right: 10px;
+}
+
+.failscene{
+	background-image: url("../images/gamePauseBackground.png");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+    height: 100vh;
+}
+
+.failscene .fail-text{
+	position: relative;
+	top:30%;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.failscene button{
+	position: relative;
+	top: 40%;
 }
 
 .endscene {
@@ -301,21 +362,32 @@ button {
 }
 
 .endscene .endtitle {
-	color: #ff99cc;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	position: relative;
-	font-family: "Chango", sans-serif;
-	font-weight: 400;
-	font-size: 40px;
-	top: -10%;
-}
+	top:30%;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
 
 .endscene button {
-	margin: 20px;
+	position: relative;
+	top: 40%;
 }
 
 /*for tablets*/
-@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+@media only screen and (min-width: 1000px) and (max-width: 1439px) {
+	button{
+		font-size: 2rem;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.homepage {
+		width: 100%;
+		height: 100vh;
+		background-image: url("../images/homebackground.png");
+		background-size: cover;
+		background-position: center;
+	}
 
 	.homepage .home-title {
 		position: absolute;
@@ -346,6 +418,57 @@ button {
 
 	.homepage .home-buttons button {
 		margin-bottom: 40px;
+	}
+
+	.about {
+		width: 100%;
+		 height: 100vh;
+		background-image: url("../images/Story_background.png");
+		background-size: cover;
+		background-position: center;
+	}
+
+	.about .about-home{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	.about .about-title{
+		color:#ff99cc;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+		position: absolute;
+		left: 20%;
+		top: 10%;
+		font-size: 2.5rem;
+	}
+	.about h2{
+		color:#ff99cc;
+	}
+
+	.about .about-text{
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+		position: absolute;
+		top:25%;
+		left: 12%;
+		padding:20px;
+		width: 850px;
+		height: 450px;
+		border: none;
+		border-radius: 5px;
+		color: white;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		background-color: #43368b94;
+	}
+
+	.story {
+		background-image: url("../images/Story_background.png");
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 100vh;
 	}
 
 	.story .mr-cat {
@@ -477,196 +600,381 @@ button {
 		top: 10px;
 		padding: 10px 20px;
 	}
-
-	.endscene .endtitle {
-		font-size: 40px;
-		top: -10%;
+  
+	.pausepage button{
+		position: relative;
+		top:37%;
+		margin-right: 30px;
 	}
 
+	.failscene{
+		background-image: url("../images/gamePauseBackground.png");
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		 height: 100vh;
+	}
+
+	.failscene .fail-text{
+		position: relative;
+		top:35%;
+		font-size: 2.5rem;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.failscene button{
+		position: relative;
+		top: 45%;
+		margin-right: 50px;
+	}
+
+	.endscene {
+		background-image: url("../images/gamePauseBackground.png");
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		 height: 100vh;
+	}
+
+	.endscene .endtitle {
+		position: relative;
+		top:35%;
+		font-size: 2.5rem;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+
 	.endscene button {
-		margin: 20px;
+		position: relative;
+		top: 45%;
+		margin-right: 50px;
 	}
 }
 
 
 /*for desktop*/
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1440px) {
 	button{
 		font-size: 2rem;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	}
+		.homepage {
+			width: 100%;
+			height: 100vh;
+			background-image: url("../images/homebackground.png");
+			background-size: cover;
+			background-position: center;
+		}
 
-	.homepage .home-title {
-		position: absolute;
-		left: 9%;
-		top: 25%;
-		font-size: 4rem;
-	}
+		.homepage .home-title {
+			color: #ff99cc;
+			text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.836);
+			position: absolute;
+			left: 9%;
+			top: 25%;
+			font-size: 4rem;
+		}
 
-	.homepage .cat-image {
-		width: 40%;
-		position: absolute;
-		bottom: 12%;
-		right: 6%;
-	}
+		.homepage .cat-image {
+			width: 40%;
+			position: absolute;
+			bottom: 12%;
+			right: 6%;
+		}
 
-	.homepage .speech-bubble {
-		position: absolute;
-		font-size: 1.5rem;
-		top: 0%;
-		right: 10%;
-	}
+		.homepage .speech-bubble {
+			position: absolute;
+			font-size: 1.5rem;
+			top: 0%;
+			right: 10%;
+			background-color: #ff99cc;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 20px;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
 
-	.homepage .home-buttons {
-		position: absolute;
-		top: 55%;
-		left: 20%;
-		width: 20%;
-	}
+		.homepage .home-buttons {
+			position: absolute;
+			top: 55%;
+			left: 20%;
+			width: 20%;
+			display: flex;
+			flex-direction: column;
+		}
 
-	.homepage .home-buttons button {
-		margin-bottom: 50px;
-	}
+		.homepage .home-buttons button {
+			margin-bottom: 50px;
+		}
 
-	.story .mr-cat {
-		width: 60%;
-		position: absolute;
-		left: 5%;
-		bottom: 0%;
-	}
+		.about .about-title{
+			color:#ff99cc;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+			position: absolute;
+			left: 20%;
+			top: 10%;
+			font-size: 3rem;
+		}
 
-	.story .story-chat {
-		position: absolute;
-		top: 35%;
-		right: 15%;
-		width: 30%;
-		font-size: 24px;
-	}
+		.about .about-text{
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+			position: absolute;
+			top:25%;
+			left: 12%;
+			padding:20px;
+			width: 1050px;
+			height: 450px;
+			border: none;
+			border-radius: 5px;
+			color: white;
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+			background-color: #43368b94;
+		}
 
-	.story .story-prev {
-		display: none;
-		position: absolute;
-		top: 35%;
-		left: 40%;
-	}
+		.story {
+			background-image: url("../images/Story_background.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100vh;
+		}
 
-	.story .story-next {
-		position: absolute;
-		top: 35%;
-		right: 5%;
-	}
+		.story .mr-cat {
+			width: 60%;
+			position: absolute;
+			left: 5%;
+			bottom: 0%;
+		}
 
-	.story .story-last-next {
-		display: none;
-		position: absolute;
-		bottom: 5px;
-		right: 20px;
-	}
+		.story .story-chat {
+			position: absolute;
+			top: 35%;
+			right: 15%;
+			width: 30%;
+			font-size: 24px;
+			color: white;
+			background-color: #7621A6;
+			border-radius: 10px;
+			padding: 15px;
+		}
 
-	.story .story-home {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-	}
+		.story .story-prev {
+			display: none;
+			position: absolute;
+			top: 35%;
+			left: 40%;
+		}
 
-	.story .story-skip {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
+		.story .story-next {
+			position: absolute;
+			top: 35%;
+			right: 5%;
+		}
 
-	.tutorial .tutorial-home {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-	}
+		.story .story-last-next {
+			display: none;
+			position: absolute;
+			bottom: 5px;
+			right: 20px;
+		}
 
-	.tutorial .tutorial-skip {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
+		.story .story-home {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
 
-	.tutorial .tutorial-tips {
-		width: 200px;
-		height: 120px;
-		padding: 20px;
-		font-size: 1.5rem;
-	}
+		.story .story-skip {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
 
-	.tutorial .tutorial-tip1 {
-		position: absolute;
-		top: 40%;
-		left: 20%;
-	}
+		.tutorial {
+			background-image: url("../images/livingroombackground.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100vh;
+		}
 
-	.tutorial .tutorial-tip2 {
-		position: absolute;
-		top: 40%;
-		right: 20%;
-	}
+		.tutorial .tutorial-home {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
 
-	.tutorial .tutorial-chat {
-		position: absolute;
-		bottom: 5%;
-		margin: 5px;
-		width: 85%;
-		font-size: 1.5rem;
-	}
+		.tutorial .tutorial-skip {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
 
-	.tutorial .tutorial-next {
-		position: absolute;
-		bottom: 5%;
-		right: 5%;
-	}
+		.tutorial .tutorial-tips {
+			width: 200px;
+			height: 120px;
+			padding: 20px;
+			border: none;
+			border-radius: 5px;
+			color: white;
+			font-size: 1.5rem;
+			background-color: #43368b94;
+		}
 
-	.tutorial .cat {
-		opacity: 0;
-		width: 8%;
-		position: absolute;
-		left: 30%;
-		top: 50%;
-	}
+		.tutorial .tutorial-tip1 {
+			position: absolute;
+			top: 40%;
+			left: 20%;
+		}
 
-	.tutorial .tutorial-chat2 {
-		position: absolute;
-		bottom: 5%;
-		margin: 5px;
-		width: 85%;
-		font-size: 1.5rem;
-	}
+		.tutorial .tutorial-tip2 {
+			position: absolute;
+			top: 40%;
+			right: 20%;
+		}
 
-	.tutorial .tutorial-chat2-next {
-		display: none;
-		position: absolute;
-		bottom: 5%;
-		right: 5%;
-	}
+		.tutorial .tutorial-chat {
+			position: absolute;
+			bottom: 5%;
+			margin: 5px;
+			width: 85%;
+			font-size: 1.5rem;
+			color: white;
+			background-color: #7621A6;
+			border-radius: 10px;
+			padding: 15px;
+		}
 
-	.tutorial .mr-cat {
-		width: 45%;
-		position: absolute;
-		bottom: 12%;
-		right: 10%;
-	}
+		.tutorial .tutorial-next {
+			position: absolute;
+			bottom: 5%;
+			right: 5%;
+		}
 
-	.game .game-pausebutton {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-	}
+		.tutorial .cat {
+			opacity: 0;
+			width: 8%;
+			position: absolute;
+			left: 30%;
+			top: 50%;
+		}
 
-	.game .cat-count {
-		position: absolute;
-		font-size: 2rem;
-		right: 10px;
-		top: 10px;
-	}
+		.tutorial .tutorial-chat2 {
+			display: none;
+			position: absolute;
+			bottom: 5%;
+			margin: 5px;
+			width: 85%;
+			font-size: 1.5rem;
+			color: white;
+			background-color: #7621A6;
+			border-radius: 10px;
+			padding: 15px;
+		}
 
-	.game .cat {
-		width: 40%;
-	}
+		.tutorial .tutorial-chat2-next {
+			display: none;
+			position: absolute;
+			bottom: 5%;
+			right: 5%;
+		}
 
-	.endscene button {
-		margin: 20px;
-	}
-}
+		.tutorial .mr-cat {
+			display: none;
+			width: 45%;
+			position: absolute;
+			bottom: 12%;
+			right: 10%;
+		}
+
+		.game {
+			background-image: url("../images/gameBackground.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100vh;
+		}
+
+		.game .game-pausebutton {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+
+		.game .cat-count {
+			position: absolute;
+			font-size: 2rem;
+			right: 10px;
+			top: 10px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			color: white;
+			background-color: #43368B;
+		}
+
+		.game .cat {
+			max-width: 10%;
+		}
+
+		.pausepage {
+			background-image: url("../images/gamePauseBackground.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			height: 100vh;
+		}
+
+		.pausepage button{
+			position: relative;
+			top:37%;
+			margin-right: 30px;
+		}
+
+		.failscene{
+			background-image: url("../images/gamePauseBackground.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			 height: 100vh;
+		}
+
+		.failscene .fail-text{
+			position: relative;
+			top:35%;
+			font-size: 2.5rem;
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+
+		.failscene button{
+			position: relative;
+			top: 45%;
+			margin-right: 50px;
+		}
+
+		.endscene {
+			background-image: url("../images/gamePauseBackground.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			 height: 100vh;
+		}
+
+		.endscene .endtitle {
+			position: relative;
+			top:35%;
+			font-size: 2.5rem;
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
+
+		.endscene button {
+			position: relative;
+			top: 45%;
+			margin-right: 50px;
+		}
+		}

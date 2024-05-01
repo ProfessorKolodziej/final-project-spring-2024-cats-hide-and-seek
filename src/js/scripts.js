@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", function() {
         story.style.display = 'block';
     });
 
+	 const aboutButton = document.querySelector('.home-about');
+    const about = document.querySelector('.about');
+
+	 aboutButton.addEventListener('click', function() {
+        homepage.style.display = 'none';
+        about.style.display = 'block';
+    });
+
+	 const homeButton0 = document.querySelector('.about-home');
+
+    homeButton0.addEventListener('click', function() {
+        about.style.display = 'none';
+        homepage.style.display = 'block';
+    });
+
     const homeButton = document.querySelector('.story-home');
 
     homeButton.addEventListener('click', function() {
@@ -91,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
     tutorialNextButton.addEventListener('click', function() {
         tutorialInfo.style.display = 'none';
     });
-    
+
     const tutorialNext2 = document.querySelector('.tutorial-chat2-next');
 
 
@@ -103,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         game.style.display = 'block';
         placeCats();
     });
-    
+
     tutorialNext2.addEventListener('click', function() {
         tutorial.style.display = 'none';
         game.style.display = 'block';
@@ -118,7 +133,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     const resumeButton = document.querySelector('.resume-title');
     const retryButton = document.querySelector('.retry-title');
-    const pausehomeButton = document.querySelector('.pausepage .home-title');
+    const pauseSurrenderButton = document.querySelector('.pausepage .surrender-title');
+	 const failScene = document.querySelector('.failscene');
     resumeButton.addEventListener('click', function() {
         pausePage.style.display = 'none';
         game.style.display = 'block';
@@ -128,12 +144,26 @@ document.addEventListener("DOMContentLoaded", function() {
         game.style.display = 'block';
         resetGameState();
     });
-    pausehomeButton.addEventListener('click', function() {
+    pauseSurrenderButton.addEventListener('click', function() {
         pausePage.style.display = 'none';
-        homepage.style.display = 'block';
+        failScene.style.display = 'block';
     });
-    
+	 const backHomeButton = document.querySelector('.backhome-title');
+	 const playAgainButton = document.querySelector('.playagain-title');
+
+	 playAgainButton.addEventListener('click', function() {
+		 failScene.style.display = 'none';
+		 game.style.display = 'block';
+		 resetGameState();
+	 });
+
+	 backHomeButton.addEventListener('click', function() {
+		 failScene.style.display = 'none';
+		 homepage.style.display = 'block';
+	 });
 });
+
+
 
 function toggleImageVisibility() {
     var catImage = document.querySelector('.cat');
@@ -194,7 +224,7 @@ function placeCats() {
             // Check for overlaps with existing cats
             for (const existingCat of catContainer.children) {
                 const rect1 = existingCat.getBoundingClientRect();
-                const rect2 = { 
+                const rect2 = {
                     left: x,
                     top: y,
                     right: x + catWidth,
@@ -231,7 +261,7 @@ function placeCats() {
         catImg.style.left = "50%";
         catImg.style.top = "50%";
         catImg.style.transform = "translate(-50%, -50%)";
-        
+
         catDiv.appendChild(catImg);
 
         catDiv.addEventListener("click", (event) => {
