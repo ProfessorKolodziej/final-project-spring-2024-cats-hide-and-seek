@@ -2,7 +2,10 @@
 .about,
 .story,
 .tutorial,
-.game {
+.game,
+.failscene,
+.pausepage,
+.endscene {
 	display: none;
 }
 

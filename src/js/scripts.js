@@ -184,6 +184,7 @@ const catImages = [
     "images/cat5.png",
     "images/cat6.png"
 ];
+const catNum = catImages.length;
 
 let catWidth, catHeight;
 function calculateCatSize() {
@@ -276,6 +277,12 @@ function placeCats() {
                 if (catImg.style.opacity != "1") {
                     playAudio(0.2);
                 }
+            }
+            if (catsFound === catNum) {
+                const game = document.querySelector('.game');
+                const endScene = document.querySelector('.endscene');
+                game.style.display = 'none';
+		        endScene.style.display = 'block';
             }
         });
 
