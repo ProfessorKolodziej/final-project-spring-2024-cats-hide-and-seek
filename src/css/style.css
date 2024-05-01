@@ -314,10 +314,6 @@ button {
 	margin: 20px;
 }
 
-.cat-wrapper-0{
-	background-color: antiquewhite;
-}
-
 /*for tablets*/
 @media only screen and (min-width: 1000px) and (max-width: 1500px) {
 
