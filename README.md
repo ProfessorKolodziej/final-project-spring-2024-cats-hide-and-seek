@@ -1,14 +1,14 @@
-# Final Project (Replace with your project name)
-
+# Cats Hide and Seek
 ## Description
 
-Please add a brief description of your final project here.
+This project aims to develop an interactive and entertaining cat hide-and-seek game that provides players with a fun and immersive experience. 
 
 ## Project Documentation
 
 - [CM523 Final Project Guidelines &amp; Schedule](https://docs.google.com/document/d/1gvG9_1XYfp5-BVUgCDL9JDaZ3Acm6hHP7lDF3MqXPzY/edit#heading=h.61wsleacz62i)
-- **Final code demo:** [Update this to show your Github Pages URL](https://professorkolodziej.github.io/cm523-final-project/). The URL will be `https://professorkolodziej.github.io/YOUR-REPOSITORY-NAME/`.
+- **Final code demo:** [Update this to show your Github Pages URL](https://professorkolodziej.github.io/final-project-spring-2024-cats-hide-and-seek/). The URL will be `https://professorkolodziej.github.io/YOUR-REPOSITORY-NAME/`.
 - Add any links to wireframes, mockups, your presentation, etc. here in a list so it is easy for you to find later.
+- (https://www.figma.com/file/FIpMXKxNF02UUlIVIWZ2Iv/Cat-Hide-and-Seek?type=design&node-id=155%3A255&mode=design&t=hK9VzslbHDLO4yFq-1)
 
 ## How to Use This Repository
 
