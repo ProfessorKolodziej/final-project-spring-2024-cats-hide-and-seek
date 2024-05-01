@@ -1,4 +1,4 @@
-# Cat Hide and Seek
+# Cats Hide and Seek
 ## Description
 
 This project aims to develop an interactive and entertaining cat hide-and-seek game that provides players with a fun and immersive experience. 
