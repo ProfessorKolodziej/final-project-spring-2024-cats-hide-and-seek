@@ -20,7 +20,7 @@
 <body>
 	 <!-- Cat sound effect -->
 	<audio class="catAudio" src="audio/catmeow.mp3"></audio>
-	
+
 	<div class="screen-container">
 
 		<div class="homepage">
@@ -32,7 +32,20 @@
 			</div>
 			<div class="home-buttons">
 				<button class="home-start">Start</button>
-				<button class="home-gallery">Gallery</button>
+				<button class="home-about">About</button>
+			</div>
+		</div>
+
+		<div class="about">
+			<button class="about-home">Home</button>
+			<h1 class="about-title"> About Cats Hide and Seek </h1>
+			<div class="about-text">
+			   <h2>Our Team</h2>
+				<p>Kelly Men<br>Yue Tang<br>Zekai Wu</p>
+				<h2>Project Details</h2>
+				<p>Cats Hide and Seek is our final project for CM523 Design and Interactive Experiences,
+					 Spring 2024, at Boston University. We're excited to bring you a delightful and casual
+					browser game that reflects our team's creativity, skills, and love for game development.</p>
 			</div>
 		</div>
 
@@ -54,10 +67,10 @@
 					<p class="tutorial-tips">Turn on the volume and listen to the meow</p>
 				</div>
 				<div class="tutorial-tip2">
-					<p class="tutorial-tips">Click around to get visual cues</p>
+					<p class="tutorial-tips">Click around the room!</p>
 				</div>
-				<p class="tutorial-chat">Mr.Cat: Now I'm hiding in this living room.
-					Just click around, the cat detector will guide you to me.</p>
+				<p class="tutorial-chat">Mr.Cat: Here's a kitten in this living room.
+					Just click around, the cat detector will guide you to her.</p>
 				<button class="tutorial-next">→</button>
 			</div>
 			<img class="cat" src="images/cat3.png" onclick="toggleImageVisibility()">
@@ -73,14 +86,19 @@
 		</div>
 
 		<div class="pausepage">
-			<p class="pause-title">Pause</p>
 			<button class="resume-title">Resume</button>
 			<button class="retry-title">Retry</button>
-			<button class="home-title">Home</button>
+			<button class="surrender-title">Surrender</button>
+		</div>
+
+		<div class="failscene">
+			<p class="fail-text">Oh no! You failed to find all the cats!</p>
+			<button class="backhome-title">Back to Home</button>
+			<button class="playagain-title">Try Again</button>
 		</div>
 
 		<div class="endscene">
-			<p class="endtitle">Congrats! You found <label class="catchcat-label">0</label> cats</p>
+			<p class="endtitle">Congrats! You found all the missing cats.</p>
 			<button class="backhome-title">Back to Home</button>
 			<button class="playagain-title">Play Again</button>
 		</div>

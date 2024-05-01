@@ -1,4 +1,5 @@
 /* styles apply to mobile by default */
+.about,
 .story,
 .tutorial,
 .game {
@@ -60,7 +61,7 @@ button {
 .homepage .cat-image {
     width: 33%;
 	position: absolute;
-	bottom: -12%;
+	bottom: 5%;
 	right: 10%;
 }
 
@@ -86,6 +87,49 @@ button {
 
 .homepage .home-buttons button {
 	margin-bottom: 20px;
+}
+
+.about {
+	width: 100%;
+    height: 100vh;
+	background-image: url("../images/Story_background.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.about .about-home{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.about .about-title{
+	color:#ff99cc;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+	position: absolute;
+	left: 20%;
+	top: 10%;
+	font-size: 2rem;
+}
+.about h2{
+	color:#ff99cc;
+}
+
+.about .about-text{
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+	position: absolute;
+	top:25%;
+	left: 12%;
+	padding:20px;
+	width: 650px;
+	height: 220px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	background-color: #43368b94;
 }
 
 .story {
@@ -174,7 +218,7 @@ button {
 	border: none;
 	border-radius: 5px;
 	color: white;
-	font-size: 0.6rem;
+	font-size: 1rem;
 	background-color: #43368b94;
 }
 
@@ -282,14 +326,31 @@ button {
     height: 100vh;
 }
 
-.pause-title {
-	color: #ff99cc;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.pausepage button{
 	position: relative;
-	font-family: "Chango", sans-serif;
-	font-weight: 400;
-	font-size: 40px;
-	top: -25%
+	top:40%;
+	margin-right: 10px;
+}
+
+.failscene{
+	background-image: url("../images/gamePauseBackground.png");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+    height: 100vh;
+}
+
+.failscene .fail-text{
+	position: relative;
+	top:30%;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.failscene button{
+	position: relative;
+	top: 40%;
 }
 
 .endscene {
@@ -301,21 +362,20 @@ button {
 }
 
 .endscene .endtitle {
-	color: #ff99cc;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 	position: relative;
-	font-family: "Chango", sans-serif;
-	font-weight: 400;
-	font-size: 40px;
-	top: -10%;
-}
+	top:30%;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
 
 .endscene button {
-	margin: 20px;
+	position: relative;
+	top: 40%;
 }
 
 /*for tablets*/
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media only screen and (min-width: 1000px) and (max-width: 1439px) {
 	button{
 		font-size: 2rem;
 		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -367,6 +427,49 @@ button {
 
 	.homepage .home-buttons button {
 		margin-bottom: 40px;
+	}
+
+	.about {
+		width: 100%;
+		 height: 100vh;
+		background-image: url("../images/Story_background.png");
+		background-size: cover;
+		background-position: center;
+	}
+
+	.about .about-home{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	.about .about-title{
+		color:#ff99cc;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+		position: absolute;
+		left: 20%;
+		top: 10%;
+		font-size: 2.5rem;
+	}
+	.about h2{
+		color:#ff99cc;
+	}
+
+	.about .about-text{
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+		position: absolute;
+		top:25%;
+		left: 12%;
+		padding:20px;
+		width: 850px;
+		height: 450px;
+		border: none;
+		border-radius: 5px;
+		color: white;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		background-color: #43368b94;
 	}
 
 	.story {
@@ -567,14 +670,32 @@ button {
 		height: 100vh;
 	}
 
-	.pause-title {
-		color: #ff99cc;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	.pausepage button{
 		position: relative;
-		font-family: "Chango", sans-serif;
-		font-weight: 400;
-		font-size: 40px;
-		top: -25%
+		top:37%;
+		margin-right: 30px;
+	}
+
+	.failscene{
+		background-image: url("../images/gamePauseBackground.png");
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		 height: 100vh;
+	}
+
+	.failscene .fail-text{
+		position: relative;
+		top:35%;
+		font-size: 2.5rem;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.failscene button{
+		position: relative;
+		top: 45%;
+		margin-right: 50px;
 	}
 
 	.endscene {
@@ -582,27 +703,26 @@ button {
 		background-size: cover;
 		background-position: center;
 		width: 100%;
-		height: 100vh;
+		 height: 100vh;
 	}
 
 	.endscene .endtitle {
-		color: #ff99cc;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 		position: relative;
-		font-family: "Chango", sans-serif;
-		font-weight: 400;
-		font-size: 40px;
-		top: -10%;
-	}
+		top:35%;
+		font-size: 2.5rem;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
 
 	.endscene button {
-		margin: 20px;
+		position: relative;
+		top: 45%;
+		margin-right: 50px;
 	}
-	}
-
+}
 
 /*for desktop*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1440px) {
 	button{
 		font-size: 2rem;
 		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -654,6 +774,32 @@ button {
 
 		.homepage .home-buttons button {
 			margin-bottom: 50px;
+		}
+
+		.about .about-title{
+			color:#ff99cc;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+			position: absolute;
+			left: 20%;
+			top: 10%;
+			font-size: 3rem;
+		}
+
+		.about .about-text{
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+			position: absolute;
+			top:25%;
+			left: 12%;
+			padding:20px;
+			width: 1050px;
+			height: 450px;
+			border: none;
+			border-radius: 5px;
+			color: white;
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+			background-color: #43368b94;
 		}
 
 		.story {
@@ -850,14 +996,32 @@ button {
 			height: 100vh;
 		}
 
-		.pause-title {
-			color: #ff99cc;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		.pausepage button{
 			position: relative;
-			font-family: "Chango", sans-serif;
-			font-weight: 400;
-			font-size: 40px;
-			top: -25%
+			top:37%;
+			margin-right: 30px;
+		}
+
+		.failscene{
+			background-image: url("../images/gamePauseBackground.png");
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			 height: 100vh;
+		}
+
+		.failscene .fail-text{
+			position: relative;
+			top:35%;
+			font-size: 2.5rem;
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+		}
+
+		.failscene button{
+			position: relative;
+			top: 45%;
+			margin-right: 50px;
 		}
 
 		.endscene {
@@ -865,20 +1029,20 @@ button {
 			background-size: cover;
 			background-position: center;
 			width: 100%;
-			height: 100vh;
+			 height: 100vh;
 		}
 
 		.endscene .endtitle {
-			color: #ff99cc;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 			position: relative;
-			font-family: "Chango", sans-serif;
-			font-weight: 400;
-			font-size: 40px;
-			top: -10%;
-		}
+			top:35%;
+			font-size: 2.5rem;
+			color: white;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			}
 
 		.endscene button {
-			margin: 20px;
+			position: relative;
+			top: 45%;
+			margin-right: 50px;
 		}
 		}
