@@ -154,8 +154,16 @@ const catImages = [
     "images/cat5.png",
     "images/cat6.png"
 ];
-const catWidth = 150;
-const catHeight = 150;
+
+let catWidth, catHeight;
+function calculateCatSize() {
+    const maxWidth = window.innerWidth * 0.25;
+    const maxHeight = window.innerHeight * 0.25;
+    catWidth = catHeight = Math.min(maxWidth, maxHeight);
+}
+calculateCatSize();
+window.addEventListener('resize', calculateCatSize);
+
 function getRandomPosition() {
     // Calculate the maximum x and y positions within the visible area of the screen
     const maxX = window.innerWidth - catWidth;
