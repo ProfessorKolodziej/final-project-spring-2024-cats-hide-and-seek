@@ -179,7 +179,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	 });
 });
 
-
+document.getElementById('audioTrigger').addEventListener('click', function() {
+	playAudio(0.2);
+ });
 
 function toggleImageVisibility() {
     var catImage = document.querySelector('.tutorial .cat');
@@ -327,3 +329,5 @@ function playAudio(volume) {
     audio.volume = volume;
     audio.play();
 }
+
+

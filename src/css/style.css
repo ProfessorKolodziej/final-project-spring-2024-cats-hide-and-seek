@@ -259,12 +259,21 @@ button {
 }
 
 .tutorial .cat {
-	opacity: 0;
+	opacity:0;
 	width: 8%;
 	position: absolute;
 	left: 30%;
 	top: 50%;
+	z-index: 1;
 }
+
+#audioTrigger {
+	background-color: transparent;
+	position:absolute;
+	border-radius: 50%;
+	left: 23%;
+	top: 42%;
+ }
 
 .tutorial .tutorial-chat2 {
 	display: none;
