@@ -1,1 +1,127 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Update your description here"/><title>Update your title here</title><link rel="shortcut icon" href="/images/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"><link rel="manifest" href="/images/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="Student Site Boilerplate"><link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/images/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Student Site Boilerplate"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="style.a7c01fe86505acb54447.css" rel="stylesheet"></head><body><main class="content-container"><h1 class="page-heading">Welcome to your final project!</h1></main><script src="main.f0ea4228673b4ac65ea8.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="Update your description here" />
+	<title>Cats Hide and Seek</title>
+	<!--
+		This is where you should link your CSS file.
+	-->
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Chango&family=Nerko+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	 <!-- Cat sound effect -->
+	<audio class="catAudio" src="audio/catmeow.mp3"></audio>
+
+	<div class="screen-container">
+
+		<div class="notification">
+			<p class="mobile-notification">For the best experience, please flip your device horizontally</p>
+			<img class="cat" src="images/cat4.png">
+		</div>
+
+		<div class="homepage">
+			<h1 class="home-title">Cats<br>Hide and Seek</h1>
+			<h1 class="home-subtitle"></h1>
+			<div class="cat-image">
+				<img src="images/homecat.png" alt="cat in a box">
+				<div class="speech-bubble">Can you find me?</div>
+			</div>
+			<div class="home-buttons">
+				<button class="home-start">Start</button>
+				<button class="home-about">About</button>
+			</div>
+		</div>
+
+		<div class="about">
+			<button class="about-home">Home</button>
+			<h1 class="about-title"> About Cats Hide and Seek </h1>
+			<div class="about-text">
+			   <h2>Our Team</h2>
+				<p>Kelly Men<br>Yue Tang<br>Zekai Wu</p>
+				<h2>Project Details</h2>
+				<p>Cats Hide and Seek is our final project for CM523 Design and Interactive Experiences,
+					 Spring 2024, at Boston University. We're excited to bring you a delightful and casual
+					browser game that reflects our team's creativity, skills, and love for game development.</p>
+			</div>
+		</div>
+
+		<div class="story">
+			<button class="story-home">Home</button>
+			<button class="story-skip">Skip</button>
+			<img class="mr-cat" src="images/MrCat.png">
+			<p class="story-chat">Hey there! I'm Mr. Cat. Can you do me a favor?</p>
+			<button class="story-prev">←</button>
+			<button class="story-next">→</button>
+			<button class="story-last-next">Next</button>
+		</div>
+
+		<div class="tutorial">
+			<button class="tutorial-home">Home</button>
+			<button class="tutorial-skip">Skip</button>
+			<div class="tutorial-info">
+				<div class="tutorial-tip1">
+					<p class="tutorial-tips">Turn on the volume and listen to the meow</p>
+				</div>
+				<div class="tutorial-tip2">
+					<p class="tutorial-tips">Click around the room!</p>
+				</div>
+				<p class="tutorial-chat">Mr.Cat: Here's a kitten in this living room.
+					Just click around. When you get close, you'll hear meowing.</p>
+				<button class="tutorial-next">→</button>
+			</div>
+			<img class="cat" src="images/cat3.png" onclick="toggleImageVisibility()">
+			<div id="audioTrigger" style="width: 250px; height: 250px;"></div>
+			<p class="tutorial-chat2">Good job! You're all set. Let's go find those naughty kittens!</p>
+			<button class="tutorial-chat2-next">→</button>
+			<img class="mr-cat" src="images/MrCat.png">
+		</div>
+
+		<div class="game">
+			<button class="game-pausebutton">&#10074&#10074</button>
+			<p class="cat-count">Cats Found <label class="catchcat-label">0</label>/6</p>
+			<div class="cat-container"></div>
+		</div>
+
+		<div class="pausepage">
+			<button class="resume-title">Resume</button>
+			<button class="retry-title">Retry</button>
+			<button class="surrender-title">Surrender</button>
+		</div>
+
+		<div class="failscene">
+			<p class="fail-text">Oh no! You failed to find all the cats!</p>
+			<button class="backhome-title1">Back to Home</button>
+			<button class="playagain-title1">Try Again</button>
+		</div>
+
+		<div class="endscene">
+			<p class="endtitle">Congrats! You found all the missing cats.</p>
+			<button class="backhome-title2">Back to Home</button>
+			<button class="playagain-title2">Play Again</button>
+			<div class="container">
+			<img src="images/Cat1.png">
+			<img src="images/cat2.png">
+			<img src="images/cat3.png">
+			<img src="images/cat4.png">
+			<img src="images/cat5.png">
+			<img src="images/cat6.png">
+			</div>
+		</div>
+
+	</div>
+	<!--
+		This is where you should link your JS file.
+	-->
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
