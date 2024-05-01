@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const chatContent = [
         "Hey there! I'm Mr. Cat. Can you do me a favor?",
         "I'm playing hide and seek with my six kids, but I can't find them anywhere. It seems like they've used that invisibility magic I showed them yesterday...",
-        "Anyway, I'm glad I found you! Could you help me hold this heavy magical cat detector? Let me show you how it works."
+        "Anyway, I'm glad I found you! Will you help me find them?"
     ];
     let currentChatIndex = 0;
 
@@ -148,18 +148,34 @@ document.addEventListener("DOMContentLoaded", function() {
         pausePage.style.display = 'none';
         failScene.style.display = 'block';
     });
-	 const backHomeButton = document.querySelector('.backhome-title');
-	 const playAgainButton = document.querySelector('.playagain-title');
+	 const backHomeButton1 = document.querySelector('.backhome-title1');
+	 const playAgainButton1 = document.querySelector('.playagain-title1');
 
-	 playAgainButton.addEventListener('click', function() {
+	 playAgainButton1.addEventListener('click', function() {
 		 failScene.style.display = 'none';
 		 game.style.display = 'block';
 		 resetGameState();
 	 });
 
-	 backHomeButton.addEventListener('click', function() {
+	 backHomeButton1.addEventListener('click', function() {
 		 failScene.style.display = 'none';
 		 homepage.style.display = 'block';
+	 });
+
+	 const backHomeButton2 = document.querySelector('.backhome-title2');
+	 const playAgainButton2 = document.querySelector('.playagain-title2');
+	 const endScene = document.querySelector('.endscene');
+
+	 playAgainButton2.addEventListener('click', function() {
+		 endScene.style.display = 'none';
+		 game.style.display = 'block';
+		 resetGameState();
+	 });
+
+	 backHomeButton2.addEventListener('click', function() {
+		 endScene.style.display = 'none';
+		 homepage.style.display = 'block';
+		 resetGameState();
 	 });
 });
 
